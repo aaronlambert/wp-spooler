@@ -1,0 +1,88 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+h1,
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+.subhead {
+  margin-top: 0;
+  color: #93c5fd;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+input,
+textarea,
+button {
+  border-radius: 0.45rem;
+  border: 1px solid #374151;
+  padding: 0.6rem;
+  font: inherit;
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+button {
+  cursor: pointer;
+  background: #2563eb;
+  border-color: #1d4ed8;
+  font-weight: 600;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#message.error {
+  color: #fca5a5;
+}
+
+#message.success {
+  color: #86efac;
+}
+
+pre {
+  background: #0b1220;
+  border: 1px solid #374151;
+  border-radius: 0.45rem;
+  padding: 0.9rem;
+  white-space: pre-wrap;
+}
+
+.hidden {
+  display: none;
+}

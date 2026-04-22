@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WP Theme Spooler</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>WordPress Theme Spooler</h1>
+      <p class="subhead">Create a new site from <code>wp-theme-spool</code> in this folder.</p>
+
+      <form id="spoolForm">
+        <div class="grid">
+          <label>Site Name<input name="siteName" id="siteName" type="text" placeholder="Locktown StoneHouse" /></label>
+          <label>Site Folder Name<input name="siteFolderName" id="siteFolderName" type="text" required /></label>
+          <label>Theme Slug<input name="themeSlug" id="themeSlug" type="text" required /></label>
+          <label>Theme Display Name<input name="themeDisplayName" id="themeDisplayName" type="text" required /></label>
+          <label>Theme URI<input name="themeUri" id="themeUri" type="url" /></label>
+          <label>Author<input name="author" id="author" type="text" /></label>
+          <label>Author URI<input name="authorUri" id="authorUri" type="url" /></label>
+          <label>Version<input name="version" id="version" type="text" /></label>
+          <label>Text Domain<input name="textDomain" id="textDomain" type="text" required /></label>
+          <label>Updated Date<input name="updated" id="updated" type="date" /></label>
+          <label class="full">Description<textarea name="description" id="description" rows="2"></textarea></label>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Create Site</button>
+          <p id="message" role="status"></p>
+        </div>
+      </form>
+
+      <section>
+        <h2>Theme Header Preview</h2>
+        <pre id="preview"></pre>
+      </section>
+
+      <section id="result" class="hidden">
+        <h2>Created</h2>
+        <ul>
+          <li><strong>Site folder:</strong> <span id="resultSiteFolder"></span></li>
+          <li><strong>Theme folder:</strong> <span id="resultThemeFolder"></span></li>
+          <li><strong>Path:</strong> <code id="resultPath"></code></li>
+        </ul>
+        <button id="copyPathBtn" type="button">Copy Path</button>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
