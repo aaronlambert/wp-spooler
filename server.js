@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/api/defaults', (req, res) => {
   res.json({
     defaults: DEFAULTS,
-    templateFolder: 'wp-theme-spool',
+    templateFolder: 'wp-new-theme',
   });
 });
 
@@ -33,7 +33,7 @@ app.post('/api/create-site', async (req, res) => {
   try {
     const result = await createSiteSpool(req.body || {}, {
       rootPath: process.cwd(),
-      templateFolderName: 'wp-theme-spool',
+      templateFolderName: 'wp-new-theme',
     });
     return res.json({ result });
   } catch (error) {
